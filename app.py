@@ -33,7 +33,7 @@ def generate():
         print(f"Error: {e}")
         generated_text = f"發生錯誤：{e}"
 
-    return render_template('index.html', response=generated_text)
+    return render_template('index2.html', response=generated_text)
 
 if __name__ == '__main__':
     app.run(debug=True)
