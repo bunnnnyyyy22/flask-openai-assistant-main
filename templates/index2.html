@@ -34,9 +34,12 @@
         <p style="text-align: center;"><button type="submit">Generate</button></p>
     </form>
     <p><br></p>
-    <p>{% if response %}</p>
-      <textarea name="response" placeholder="Response"  {{ response }} class="fr-rounded fr-large" style="height: 194px; width: 870px;"></textarea>
-    <p>{% endif %}</p>
+{% if response %}
+<div style="text-align: center; margin-top: 20px;">
+  <!-- 🌟 關鍵：將 {{ response }} 移到 <textarea> 與 </textarea> 的中間 -->
+  <textarea name="response" placeholder="Response" class="fr-rounded fr-large" style="height: 194px; width: 870px;" readonly>{{ response }}</textarea>
+</div>
+{% endif %}
 </body>
 
 </html>
