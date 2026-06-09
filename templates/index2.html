@@ -12,13 +12,15 @@
   width: 100%; 
   max-width: 500px; 
   padding: 30px; 
-  background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('static/imgs/rabbit.jpg'); 
+  /* 這裡改用 Flask 的 url_for 語法來引用靜態資料夾裡的兔子圖片 */
+  background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('{{ url_for('static', filename='imgs/rabbit.jpg') }}'); 
   background-size: cover; 
   background-position: center; 
   border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 幫卡片加點淡淡的陰影，質感會更好 */
 ">
-  <h3 style="color: #333;">AI App with OpenAI API</h3>
-  <p style="color: #666;">Rabbit!</p>
+  <h3 style="color: #333; font-weight: bold; margin-bottom: 10px;">AI App with OpenAI API</h3>
+  <p style="color: #555; line-height: 1.6;">Rabbit!</p>
 </div>
 
 <body data-new-gr-c-s-loaded="14.1229.0" spellcheck="false">
