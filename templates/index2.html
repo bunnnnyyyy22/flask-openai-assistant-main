@@ -10,17 +10,20 @@
 <div style="
   position: relative; 
   width: 100%; 
-  max-width: 500px; 
-  padding: 30px; 
-  /* 這裡改用 Flask 的 url_for 語法來引用靜態資料夾裡的兔子圖片 */
-  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('{{ url_for('static', filename='imgs/dong.jpg') }}'); 
-  background-size: cover; 
+  max-width: 650px; 
+  aspect-ratio: 16 / 9; /* 🌟 強制卡片比例與照片一致，照片就不會被裁剪了！ */
+  padding: 40px; 
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('{{ url_for('static', filename='imgs/rabbit.jpg') }}'); 
+  background-size: cover; /* 配合比例，這裡依然用 cover 但因為比例對了，所以不會被裁切 */
   background-position: center; 
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 幫卡片加點淡淡的陰影，質感會更好 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 🌟 把文字移到左下角，這樣比較不會擋到 Dong-dong 帥氣的臉 */
 ">
-  <h3 style="color: #333; font-weight: bold; margin-bottom: 10px;">His name is Dong-dong.</h3>
-  <p style="color: #555; line-height: 1.6;">OuO</p>
+  <h3 style="color: #000; font-weight: bold; margin-bottom: 8px; text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">His name is Dong-dong.</h3>
+  <p style="color: #111; font-weight: bold; text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">OuO</p>
 </div>
 
 <body data-new-gr-c-s-loaded="14.1229.0" spellcheck="false">
